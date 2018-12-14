@@ -1,0 +1,10 @@
+lab2_2_6=[*nrel_character<-rrel_key_sc_element:...
+(*
+->rrel_key_sc_element:concept_men;concept_animal;concept_entity;concept_essence;;
+	<-statement;;
+	=>nrel_main_idtf:[Утв.(персонаж*, человек, животные, сущность, существо)] (* <-lang_ru;; *);;
+	<=nrel_sc_text_translation:...
+	(*
+		->[Персонажами могут быть люди, животные, сверхъестественные, мифические, божественные существа или персонифицированные абстрактные сущности] (* <-lang_ru;; *);;
+	*);;
+*);;*];;

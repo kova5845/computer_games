@@ -1,0 +1,74 @@
+nrel_account
+=> nrel_main_idtf:
+	[аккаунт*] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[быть аккаунтом*] (* <- lang_ru;; *);
+	[account*] (* <- lang_en;; *);
+
+<-binary_relation 
+	(*
+		<- arity (* <- consept_parameter;; *);;
+		=> nrel_measurement: 2;;
+	*);
+
+=> nrel_first_domain:
+	persona;
+=> nrel_second_domain:
+	 virtual_things
+(* => nrel_main_idtf: [виртуальное имущество] (* <- lang_ru;; *);; *);
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination: ...
+					(*
+						-> persona;;
+						-> virtual_things;;
+					*);;
+	*);
+
+<- norole_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- antitransitive_relation;
+<- antisymmetric_relation;
+
+<- rrel_key_sc_element:
+	Definition_account
+	(*
+		=> nrel_main_idtf:
+			[Опр.(аккаунт*)] (* <- lang_ru;; *);;
+		<- sc_defenition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example:
+			[Cпециальная запись в базе данных, которая соотносит реального человека к принадлежащему ему виртуальному имуществу.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:
+			...
+			(*
+				-> data_base (* 
+=> nrel_main_idtf: [база данных] (* <- lang_ru;; *);; *);;
+				-> persona;;
+				-> virtual_things;;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	Statment_account
+	(*
+		=> nrel_main_idtf:
+			[Утв.(человек)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example:
+			[Каждый человек может иметь несколько аккаунтов.] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_norole_relation;;
+
+nrel_used_constants
+=> nrel_main_idtf: [Использованные константы] (* <- lang_ru;; *);
+<- sc_node_norole_relation;;

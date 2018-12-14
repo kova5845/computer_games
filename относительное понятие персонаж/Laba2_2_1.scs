@@ -1,0 +1,6 @@
+//Синонимы
+lab2.2.1=[*
+nrel_character=>nrel_idtf:[character*] (* <- lang_en;; *);;
+nrel_character=>nrel_idtf:[hero*] (* <- lang_en;; *);;
+nrel_character=>nrel_idtf:[to be a character*] (* <- lang_en;; *);;
+*];;

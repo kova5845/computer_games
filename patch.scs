@@ -1,0 +1,41 @@
+concept_patch
+=> nrel_main_idtf:
+	[патч] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[patch] (* <- lang_en;; *);
+<= nrel_inclusion:
+	file (* => nrel_main_idtf: [файл] (* <- lang_ru;; *);; *);
+->rrel_example: Patch_7.20
+(* => nrel_main_idtf: [Патч 7.20] (* <- lang_ru;; *);; *);
+<- rrel_key_sc_element:
+	Definition_patch
+	(*
+		=> nrel_main_idtf:
+			[Опр.(патч)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Файл, вносящий обновления в игру.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:
+			...
+			(*
+				-> computer_game;;
+				-> update (*
+=> nrel_main_idtf: [обновление] (* <- lang_ru;; *);; *);;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	Statment_patch
+	(*
+		=> nrel_main_idtf:
+			[Утв.(размер игры)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Патч может как увеличить размер игры, так и уменьшить.] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;

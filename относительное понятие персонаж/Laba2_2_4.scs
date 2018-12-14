@@ -1,0 +1,8 @@
+//арность отношения
+lab2.2.4=[*
+nrel_character<-binary_relation;;
+parameter->arity;;
+arity->binary_relation;;
+binary_relation=>nrel_measurement:2;;
+2<-number;;*];;
+

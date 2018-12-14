@@ -1,0 +1,48 @@
+concept_npc
+=> nrel_main_idtf:
+	[нпс] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[npc] (* <- lang_en;; *);
+<= nrel_inclusion:
+	computer_game_person (* => nrel_main_idtf: [игровой персонаж] (* <- lang_ru;; *);; *);
+->rrel_example: Big_Smoke
+(* => nrel_main_idtf: [Биг Смоук] (* <- lang_ru;; *);; *);
+<- rrel_key_sc_element:
+	Definition_npc
+	(*
+		=> nrel_main_idtf:
+			[Опр.(нпс)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Неигровой персонаж, чьё поведение обычно заскриптовано и жёстко ограничено, существующий исключительно для взаимодействия с настоящим игроком и развития сюжета.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:
+			...
+			(*
+				-> coputer_game_person (*
+=> nrel_main_idtf: [игровой персонаж] (* <- lang_ru;; *);; *);;
+				-> player (*
+=> nrel_main_idtf: [игрок] (* <- lang_ru;; *);; *);;
+				-> story (*
+=> nrel_main_idtf: [сюжет] (* <- lang_ru;; *);; *);;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	Statment_npc
+	(*
+		=> nrel_main_idtf:
+			[Утв.(сюжет, компьютерная игра)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Чем интересней игровой сюжет, тем больше нпс в игре.] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;
+
+nrel_used_constants
+=> nrel_main_idtf: [Использованные константы] (* <- lang_ru;; *);
+<- sc_node_norole_relation;;

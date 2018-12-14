@@ -1,0 +1,6 @@
+lab2.1=[*
+concept_gamer=>nrel_idtf:[gamer] (* <- lang_en;; *);;
+concept_gamer=>nrel_idtf:[множество игроков] (* <- lang_ru;; *);;
+*];;
+
+//Абсолютное Понятие

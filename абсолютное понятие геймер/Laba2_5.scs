@@ -1,0 +1,13 @@
+//отсутсвует
+
+lab2.5=[*concept_gamer<-rrel_key_sc_element:...
+(*
+	->rrel_key_sc_element:concept_button;ostis_system;;
+	<-statement;;
+	=>nrel_main_idtf:[Утв.(игрок, игра, правила)](* <- lang_ru;; *);;
+	<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:[Чтобы стать игроком, необходимо принять правила игры](* <- lang_ru;; *);;
+	*);;
+*);;
+*];;

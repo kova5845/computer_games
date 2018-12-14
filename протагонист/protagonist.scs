@@ -1,0 +1,50 @@
+concept_protagonist //это системный идентификатор
+=> nrel_main_idtf:
+	[протагонист] (* <- lang_ru;; *);   //так ты ему присваеваешь русское имя
+
+
+=> nrel_idtf:
+	[множество протагонистов] (* <- lang_ru;; *);    // обычные идентификаторы
+	[protagonist] (* <- lang_en;; *);
+
+
+->rrel_example: Harry_Potter 
+(* => nrel_main_idtf: [Гарри Поттер] (* <- lang_ru;; *);; *);       //пример
+<- rrel_key_sc_element:
+
+
+	Definition_protagonist             //определение
+	(*
+		=> nrel_main_idtf:
+			[Опр.(протагонист)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Протагонсит - главный герой игры] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:          //используемые константы
+			...
+			(*
+				-> nrel_character (*
+=> nrel_main_idtf: [персонаж] (* <- lang_ru;; *);; *);;
+				-> video_game (*
+=> nrel_main_idtf: [игра] (* <- lang_ru;; *);; *);;
+			*);;
+
+	*);
+
+
+<- rrel_key_sc_element:
+	Statment_protagonist                  //утверждение
+	(*
+		=> nrel_main_idtf:
+			[Утв.(сюжет, игра)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Протагонист всегда продвигает сюжет игры] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;         //тип узла

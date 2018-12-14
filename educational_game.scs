@@ -1,0 +1,46 @@
+concept_educational_game
+=> nrel_main_idtf:
+	[обучающая игра] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[educational game] (* <- lang_en;; *);
+<= nrel_inclusion:
+	computer_game;
+->rrel_example: Luntic_learn_numbers
+(* => nrel_main_idtf: [Лунтик учит цифры] (* <- lang_ru;; *);; *);
+<- rrel_key_sc_element:
+	Definition_educational_game
+	(*
+		=> nrel_main_idtf:
+			[Опр.(обучающая игра)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Программное обеспечение, тренирующее и обучающее человека в игровом режиме.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:
+			...
+			(*
+				-> software (*
+=> nrel_main_idtf: [программное обеспечение] (* <- lang_ru;; *);; *);;
+				-> persona (*
+=> nrel_main_idtf: [человек] (* <- lang_ru;; *);; *);;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	Statment_educational_game
+	(*
+		=> nrel_main_idtf:
+			[Утв.(обучение)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Обучающая игра ускоряет процесс обучения.] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;
+
+nrel_used_constants
+=> nrel_main_idtf: [Использованные константы] (* <- lang_ru;; *);
+<- sc_node_norole_relation;;

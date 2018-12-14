@@ -1,0 +1,38 @@
+concept_bag
+=> nrel_main_idtf:
+	[баг] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[bag] (* <- lang_en;; *);
+<= nrel_inclusion:
+	mistake (* => nrel_main_idtf: [ошибка] (* <- lang_ru;; *);; *);
+<- rrel_key_sc_element:
+	Definition_bag
+	(*
+		=> nrel_main_idtf:
+			[Опр.(баг)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Ошибка в работе компьютерной игры] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:
+			...
+			(*
+				-> computer_game;;
+				-> mistake;;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	Statment_bag
+	(*
+		=> nrel_main_idtf:
+			[Утв.(компьютерная игра)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Баги делают игру уязвимой.] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;

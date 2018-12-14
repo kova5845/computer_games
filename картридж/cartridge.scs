@@ -1,0 +1,52 @@
+concept_game_cartridge  //это системный идентификатор
+=> nrel_main_idtf:
+	[игровой картридж] (* <- lang_ru;; *);   //так ты ему присваеваешь русское имя
+
+
+=> nrel_idtf:
+	[множество игровых картриджей] (* <- lang_ru;; *);    // обычные идентификаторы
+	[game cartridge] (* <- lang_en;; *);
+
+
+->rrel_example: mario_cartridge 
+(* => nrel_main_idtf: [картридж с игрой марио] (* <- lang_ru;; *);; *);       //пример
+<- rrel_key_sc_element:
+
+
+	Definition_game_cartridge             //определение
+	(*
+		=> nrel_main_idtf:
+			[Опр.(картридж)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Игрово́й ка́ртридж — электронное устройство  предназначенное для хранения сменной игровой программы в игровых консолях] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:          //используемые константы
+			...
+			(*
+				-> nrel_device (*
+=> nrel_main_idtf: [устройство] (* <- lang_ru;; *);; *);;
+				-> nrel_game_console (*
+=> nrel_main_idtf: [игровая консоль] (* <- lang_ru;; *);; *);;
+				-> computer_game (*
+=> nrel_main_idtf: [игровая программа] (* <- lang_ru;; *);; *);;
+			*);;
+	*);
+
+
+<- rrel_key_sc_element:
+	Statment_game_cartridge                //утверждение
+	(*
+		=> nrel_main_idtf:
+			[Утв.(игра)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Каждый игровой картридж хранит игру] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;         //тип узла
+

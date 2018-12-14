@@ -1,0 +1,41 @@
+concept_pati
+=> nrel_main_idtf:
+	[пати] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[pati] (* <- lang_en;; *);
+<= nrel_inclusion:
+	 player (* => nrel_main_idtf: [игрок] (* <- lang_ru;; *);; *);
+->rrel_example: Pati_in_dota_2
+(* => nrel_main_idtf: [Пати в Dota 2] (* <- lang_ru;; *);; *);
+<- rrel_key_sc_element:
+	Definition_pati
+	(*
+		=> nrel_main_idtf:
+			[Опр.(пати)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Группа игроков, объединенных общей целью.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:
+			...
+			(*
+				-> player;;
+				-> goal (*
+=> nrel_main_idtf: [цель] (* <- lang_ru;; *);; *);;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	Statment_pati
+	(*
+		=> nrel_main_idtf:
+			[Утв.(человек)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Пати не может состоять из одного человека.] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;

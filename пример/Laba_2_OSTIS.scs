@@ -1,0 +1,125 @@
+concept_noob  //это системный идентификатор
+=> nrel_main_idtf:
+	[нуб] (* <- lang_ru;; *);   //так ты ему присваеваешь русское имя
+=> nrel_idtf:
+	[множество нубов] (* <- lang_ru;; *);    // обычные идентификаторы
+	[noob] (* <- lang_en;; *);
+<= nrel_inclusion:
+	player (* => nrel_main_idtf: [игрок] (* <- lang_ru;; *);; *);    //включение
+->rrel_example: noob_Alexey 
+(* => nrel_main_idtf: [Нуб Алёша] (* <- lang_ru;; *);; *);       //пример
+<- rrel_key_sc_element:
+	Definition_noob             //определение
+	(*
+		=> nrel_main_idtf:
+			[Опр.(нуб)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Нуб - новый пользователь, приступающий к освоению тонкостей какой-либо технологии, в компьютерных играх] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:          //используемые константы
+			...
+			(*
+				-> nrel_user (*
+=> nrel_main_idtf: [пользователь] (* <- lang_ru;; *);; *);;
+				-> technology (*
+=> nrel_main_idtf: [технология] (* <- lang_ru;; *);; *);;
+				-> computer_game;;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	Statment_noob                  //утверждение
+	(*
+		=> nrel_main_idtf:
+			[Утв.(игрок, компьютерная игра)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Игрок, который вошёл в компьютерную игру первый раз, является нубом] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;         //тип узла
+
+
+
+//дальше идёт второе прнятие это уже в другой файл
+nrel_location            //это системный идентификатор
+=> nrel_main_idtf:
+	[локация*] (* <- lang_ru;; *);         //так ты ему присваеваешь русское имя
+=> nrel_idtf:
+	[быть локацией*] (* <- lang_ru;; *);
+	[location*] (* <- lang_en;; *);
+<-binary_relation             //это арность отношения, если у тебя бинарное, то оставляй всё так
+	(*
+		<- arity (* <- consept_parameter;; *);;
+		=> nrel_measurement: 2;;
+	*);
+
+=> nrel_first_domain:            //первый домен
+	computer_game 
+(* => nrel_main_idtf: [компьютерная игра] (* <- lang_ru;; *);; *);
+=> nrel_second_domain:           //второй домен
+	location 
+(* => nrel_main_idtf: [местоположение] (* <- lang_ru;; *);; *);
+
+=> nrel_definitional_domain:       //область определения
+	...
+	(*
+		<= nrel_combination: ...
+					(*
+						-> computer_game;;
+						-> location;;
+					*);;
+	*);
+
+<- norole_relation;           //здесь перечислены свойства отношений
+<- oriented_relation;
+<- antireflexive_relation;
+<- antitransitive_relation;
+<- antisymmetric_relation;
+
+<- rrel_key_sc_element:
+	Definition_location           //опредеение
+	(*
+		=> nrel_main_idtf:
+			[Опр.(локация*)] (* <- lang_ru;; *);;
+		<- sc_defenition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example:
+			[Локация - изолированный участок мира компьютерной игры] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:         //используемые константы
+			...
+			(*
+				-> computer_game_world (* 
+=> nrel_main_idtf: [мир компьютерной игры] (* <- lang_ru;; *);; *);;
+				-> computer_game (* 
+=> nrel_main_idtf: [Использованные константы] (* <- lang_ru;; *);; *);;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	Statment_location        //утверждение
+	(*
+		=> nrel_main_idtf:
+			[Утв.(игрок, локация*)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example:
+			[Игрок не может одновременно находиться в двух локациях] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_norole_relation;;        //тип узла
+
+
+//последнюю штуку дописываешь если у тебя не работабт используемые константы
+nrel_used_constants
+=> nrel_main_idtf: [Использованные константы] (* <- lang_ru;; *);
+<- sc_node_norole_relation;;

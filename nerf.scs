@@ -1,0 +1,75 @@
+nrel_nerf
+=> nrel_main_idtf:
+	[нерф*] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[быть нерфом*] (* <- lang_ru;; *);
+	[nerf*] (* <- lang_en;; *);
+
+<-binary_relation 
+	(*
+		<- arity (* <- consept_parameter;; *);;
+		=> nrel_measurement: 2;;
+	*);
+
+=> nrel_first_domain:
+	game_version (*
+=> nrel_main_idtf: [версия игры] (* <- lang_ru;; *);; *);
+
+=> nrel_second_domain:
+	 characterictic_game (*
+=> nrel_main_idtf: [характеристика игры] (* <- lang_ru;; *);; *);
+
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination: ...
+					(*
+						-> game_version;;
+						-> characterictic_game;;
+					*);;
+	*);
+
+<- norole_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- antitransitive_relation;
+<- antisymmetric_relation;
+
+<- rrel_key_sc_element:
+	Definition_nerf
+	(*
+		=> nrel_main_idtf:
+			[Опр.(нерф)] (* <- lang_ru;; *);;
+		<- sc_defenition;;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example:
+			[Ухудшение каких-либо характеристик в новой версии игры.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:
+			...
+			(*
+				-> game_version;;
+				-> characterictic_game;;
+			*);;
+	*);
+
+<- rrel_key_sc_element:
+	Statment_nerf
+	(*
+		=> nrel_main_idtf:
+			[Утв.()] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> rrel_example:
+			[Нерфы используют для поддержания баланса игры.] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_norole_relation;;
+
+nrel_used_constants
+=> nrel_main_idtf: [Использованные константы] (* <- lang_ru;; *);
+<- sc_node_norole_relation;;

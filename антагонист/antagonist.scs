@@ -1,0 +1,51 @@
+concept_antagonist //это системный идентификатор
+=> nrel_main_idtf:
+	[антагонист] (* <- lang_ru;; *);   //так ты ему присваеваешь русское имя
+
+
+=> nrel_idtf:
+	[множество антагонистов] (* <- lang_ru;; *);    // обычные идентификаторы
+	[antagonist] (* <- lang_en;; *);
+
+
+->rrel_example: Drago_Malfoy 
+(* => nrel_main_idtf: [Драго Малфой] (* <- lang_ru;; *);; *);       //пример
+<- rrel_key_sc_element:
+
+
+	Definition_antagonist             //определение
+	(*
+		=> nrel_main_idtf:
+			[Опр.(антагонист)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Антогонист - главный персонаж игры, противостоящий протагонисту] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:          //используемые константы
+			...
+			(*
+				-> nrel_character (*
+=> nrel_main_idtf: [персонаж] (* <- lang_ru;; *);; *);;
+				-> video_game (*
+=> nrel_main_idtf: [игра] (* <- lang_ru;; *);; *);;
+				-> protagonist (*
+=> nrel_main_idtf: [протагонист] (* <- lang_ru;; *);; *);;
+			*);;
+	*);
+
+
+<- rrel_key_sc_element:
+	Statment_antagonist                  //утверждение
+	(*
+		=> nrel_main_idtf:
+			[Утв.(протагонист)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Антагонист - всегда противостоит протагонисту ] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;         //тип узла

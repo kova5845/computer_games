@@ -1,0 +1,45 @@
+concept_guide
+=> nrel_main_idtf:
+	[гайд] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[guide] (* <- lang_en;; *);
+->rrel_example: Guide_BrewMaster
+(* => nrel_main_idtf: [Гайд на Брюмастера] (* <- lang_ru;; *);; *);
+<- rrel_key_sc_element:
+	Definition_guide
+	(*
+		=> nrel_main_idtf:
+			[Опр.(гайд)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Руководство по игре, в котором содержатся советы, помогающие быстрее освоить игровой процесс.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:
+			...
+			(*
+				-> rukovodstvo (*
+=> nrel_main_idtf: [руководство] (* <- lang_ru;; *);; *);;
+				-> computer_game;;
+				-> game_process (*
+=> nrel_main_idtf: [игровой процесс] (* <- lang_ru;; *);; *);;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	Statment_guide
+	(*
+		=> nrel_main_idtf:
+			[Утв.(нуб)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Гайды обычно читают нубы.] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;
+
+nrel_used_constants
+=> nrel_main_idtf: [Использованные константы] (* <- lang_ru;; *);
+<- sc_node_norole_relation;;

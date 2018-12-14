@@ -1,0 +1,48 @@
+concept_game_store  //это системный идентификатор
+=> nrel_main_idtf:
+	[игровой магазин] (* <- lang_ru;; *);   //так ты ему присваеваешь русское имя
+
+
+=> nrel_idtf:
+	[множество игровых магазинов] (* <- lang_ru;; *);    // обычные идентификаторы
+	[game store] (* <- lang_en;; *);
+
+
+->rrel_example: steam
+(* => nrel_main_idtf: [Стим] (* <- lang_ru;; *);; *);       //пример
+<- rrel_key_sc_element:
+
+
+	Definition_game_store          //определение
+	(*
+		=> nrel_main_idtf:
+			[Опр.(игровой магазин)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Игровой магазин - магазин, в котором продаются видеоигры] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:          //используемые константы
+			...
+			(*
+				-> nrel_videogame (*
+=> nrel_main_idtf: [видеоигра] (* <- lang_ru;; *);; *);;
+			*);;
+	*);
+
+
+<- rrel_key_sc_element:
+	Statment_game_store                  //утверждение
+	(*
+		=> nrel_main_idtf:
+			[Утв.(видеоигра)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [В каждом игровом магазине можно купить видеоигру] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;         //тип узла
+

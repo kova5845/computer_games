@@ -1,0 +1,13 @@
+//Определение
+lab2.2=[*concept_gamer<-rrel_key_sc_element:...
+(*
+<-definition;;=>nrel_main_idtf:[Опр.(геймер)] (* <- lang_ru;; *);;<=nrel_sc_text_translation:...
+(*
+->rrel_example:[Человек, играющий в видеоигры](* <- lang_ru;; *);;
+*);;
+<=nrel_using_constants:...
+(*
+->concept_person;;
+->concept_video_game;;
+*);;
+*);;	*];;

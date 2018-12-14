@@ -1,0 +1,41 @@
+concept_setting
+=> nrel_main_idtf:
+	[сеттинг] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[setting] (* <- lang_en;; *);
+<= nrel_inclusion:
+	computer_game;
+->rrel_example: epoha_19_v
+(* => nrel_main_idtf: [Эпоха 19в.] (* <- lang_ru;; *);; *);
+<- rrel_key_sc_element:
+	Definition_setting
+	(*
+		=> nrel_main_idtf:
+			[Опр.(сеттинг)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Среда, в которой происходит действие компьютерной игры.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:
+			...
+			(*
+				-> sreda (*
+=> nrel_main_idtf: [среда] (* <- lang_ru;; *);; *);;
+				-> computer_game;;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	Statment_setting
+	(*
+		=> nrel_main_idtf:
+			[Утв.(место, время, событие)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Сеттинги классифицируются по месту, времени и событиям.] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;

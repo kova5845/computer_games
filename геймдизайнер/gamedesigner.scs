@@ -1,0 +1,49 @@
+concept_game_designer  //это системный идентификатор
+=> nrel_main_idtf:
+	[геймдизайнер] (* <- lang_ru;; *);   //так ты ему присваеваешь русское имя
+
+
+=> nrel_idtf:
+	[множество геймдизайнеров] (* <- lang_ru;; *);    // обычные идентификаторы
+	[game_designer] (* <- lang_en;; *);
+
+
+->rrel_example: Victor_Kisliy 
+(* => nrel_main_idtf: [Виктор Кислый] (* <- lang_ru;; *);; *);       //пример
+
+
+<- rrel_key_sc_element:
+
+
+	Definition_game_designer             //определение
+	(*
+		=> nrel_main_idtf:
+			[Опр.(геймдизайнер)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Геймдизайнер — специалист, отвечающий за разработку правил и содержания игрового процесса создаваемой игры] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:          //используемые константы
+			...
+			(*
+				-> nrel_videogame (*
+=> nrel_main_idtf: [игра] (* <- lang_ru;; *);; *);;
+			*);;
+	*);
+
+
+<- rrel_key_sc_element:
+	Statment_game_designer                  //утверждение
+	(*
+		=> nrel_main_idtf:
+			[Утв.(программист)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Геймдизайнер не тоже, что и программист] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;         //тип узла

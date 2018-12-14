@@ -1,0 +1,46 @@
+concept_bot
+=> nrel_main_idtf:
+	[бот] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[bot] (* <- lang_en;; *);
+<= nrel_inclusion:
+	computer_program (* => nrel_main_idtf: [компьютерная программа] (* <- lang_ru;; *);; *);
+->rrel_example: Bot_Martin
+(* => nrel_main_idtf: [Бот Мартин] (* <- lang_ru;; *);; *);
+<- rrel_key_sc_element:
+	Definition_bot
+	(*
+		=> nrel_main_idtf:
+			[Опр.(бот)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Специальная программа, управляющая действиями персонажа игры.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:
+			...
+			(*
+				-> computer_program;;
+				-> character (*
+=> nrel_main_idtf: [персонаж] (* <- lang_ru;; *);; *);;
+				-> computer_game;;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	Statment_bot
+	(*
+		=> nrel_main_idtf:
+			[Утв.(игрок)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Боты используются для замены игрока.] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;
+
+nrel_used_constants
+=> nrel_main_idtf: [Использованные константы] (* <- lang_ru;; *);
+<- sc_node_norole_relation;;

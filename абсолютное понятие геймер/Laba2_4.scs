@@ -1,0 +1,10 @@
+lab2.4=[*concept_gamer<=nrel_subdividing:...
+(*
+->concept_simple_gamer;;
+->concept_hardcore_gamer;;
+->concept_noob;;
+->concept_retro_gamer;;
+->concept_pro_gamer;;
+=>nrel_main_idtf:[Разбиение по типу геймеров] (* <- lang_ru;; *);;
+*);;
+*];;

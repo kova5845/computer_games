@@ -1,0 +1,44 @@
+concept_mob
+=> nrel_main_idtf:
+	[моб] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[mob] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_npc;
+->rrel_example: Crip_in_Dota_2
+(* => nrel_main_idtf: [Крип в Dota 2] (* <- lang_ru;; *);; *);
+<- rrel_key_sc_element:
+	Definition_mob
+	(*
+		=> nrel_main_idtf:
+			[Опр.(моб)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Вид NPC, для которого характерно определенное свойство – быть уничтоженным игроком для набора опыта, денег или различных предметов.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:
+			...
+			(*
+				-> concept_npc;;
+				-> player;;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	Statment_mob
+	(*
+		=> nrel_main_idtf:
+			[Утв.(жанр)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Во всех играх жанра MOBA есть мобы.] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;
+
+nrel_used_constants
+=> nrel_main_idtf: [Использованные константы] (* <- lang_ru;; *);
+<- sc_node_norole_relation;;

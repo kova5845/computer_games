@@ -1,0 +1,44 @@
+concept_mod
+=> nrel_main_idtf:
+	[мод] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[mod] (* <- lang_en;; *);
+<= nrel_inclusion:
+	program (* => nrel_main_idtf: [программа] (* <- lang_ru;; *);; *);
+->rrel_example: mod_Optifine
+(* => nrel_main_idtf: [мод Optifine] (* <- lang_ru;; *);; *);
+<- rrel_key_sc_element:
+	Definition_mod
+	(*
+		=> nrel_main_idtf:
+			[Опр.(мод)] (* <- lang_ru;; *);;
+		<- sc_definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+                -> [Программа, вносящая небольшие правки в игровой процесс, или дополняющая его.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_used_constants:
+			...
+			(*
+				-> game_proc (*
+=> nrel_main_idtf: [игровой процесс] (* <- lang_ru;; *);; *);;
+			*);;
+	*);
+<- rrel_key_sc_element:
+	Statment_mod
+	(*
+		=> nrel_main_idtf:
+			[Утв.(компьютерная игра)] 
+				(* <- lang_ru;; *);;
+		<= nrel_sc_text_translation:
+			...
+			(* 
+			-> [Моды делают компьютерную игру более интересной.] (* <- lang_ru;; *);;
+			*);;
+	*);
+<- sc_node_not_relation;;
+
+nrel_used_constants
+=> nrel_main_idtf: [Использованные константы] (* <- lang_ru;; *);
+<- sc_node_norole_relation;;
